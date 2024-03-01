@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+
+int main() {
+
+    int a,b,c,d;
+
+    scanf("%d %d %d %d",&a,&b,&c,&d);
+
+    int um=c-a;
+    int dois=d-b;
+    int aux;
+
+    if(um==0 && dois==0){
+        printf("O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)\n");
+    }else if(um>0 && dois>0){
+        printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n",um,dois);
+    }else if(um<0 && dois>0){
+        printf("O JOGO DUROU 0 HORA(S) E %d MINUTO(S)\n",dois);
+    }else if(um==1 && dois<0){
+        aux=60+dois;
+        printf("O JOGO DUROU 0 HORA(S) E %d MINUTO(S)\n",aux);
+    }else if(um>1 && dois<0){
+        aux=60+dois;
+        printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n",um,aux);
+    }else if(um>1 && dois>0){
+        printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n",um,dois);
+    }else if(um>0 && dois==0){
+        printf("O JOGO DUROU %d HORA(S) E 0 MINUTO(S)\n",um);
+    }
+
+    return 0;
+}
