@@ -11,9 +11,12 @@ int main(){
     scanf("%d",&N);
 
     while(N!=0){
-
+            
+      totalJ=0;
+      totalZ=0;
+      
       printf("Teste %d\n",cont);
-
+      cont++;
       for(int i=0;i<N;i++){
 
           scanf("%d %d",&J,&Z);
@@ -26,16 +29,12 @@ int main(){
           printf("%d\n",contaUM);
 
       }
-      cont++;
+      
+      printf("\n");
+      
       scanf("%d",&N);
 
     }
 
     return 0;
 }
-
-
-
-
-
-
